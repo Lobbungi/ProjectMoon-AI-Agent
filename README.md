@@ -1,7 +1,11 @@
 # PROJECT MOON LORE — 세계관 안내자 AI 프로토타입 v16
 
-Lobotomy Corporation / Library of Ruina / Limbus Company 세 작품을 포괄하는 비공식 팬 프로젝트입니다.
+Lobotomy Corporation / Library of Ruina / Limbus Company 세 작품을 포괄하는 비공식 팬 프로젝트입니다. `로보토미-...`로 시작하는 파일명도 로보토미 코퍼레이션 단독 자료라는 뜻으로 해석하지 않습니다.
 
+## 실행
+1. ZIP 압축 해제
+2. 폴더에서 터미널 실행 후 `python -m http.server 8000`
+3. 브라우저에서 `http://localhost:8000` 열기
 
 ## 이번 보강
 - 보충 ZIP에 있던 PDF 5개를 모두 열어 텍스트 추출을 확인했습니다.
@@ -14,6 +18,9 @@ Lobotomy Corporation / Library of Ruina / Limbus Company 세 작품을 포괄하
 - `data/lore.json`: 기존 요약 + PDF 페이지별/구간별 검색 자료
 - `data/documents_manifest.json`: 전체 PDF 25개의 페이지 수, 텍스트 추출 상태 및 보강 항목 수
 - `data/sources.md`: 처리 원칙과 파일별 추출 현황
+
+## 사용량 제한 안내
+사이트 코드에 설정되어 있던 데모 일일 20회 제한과 개인 API 모드의 표시상 100회 제한을 제거했습니다. 사이트 자체에서 질문 횟수를 차단하지 않습니다. 데모 모드는 API 호출 없이 키워드 검색·규칙 기반 답변을 생성합니다. 개인 API 모드는 Gemini 제공업체의 계정별 요청량·요금·모델 접근 제한을 그대로 따르며, 이 제공업체 한도는 사이트 코드로 해제할 수 없습니다.
 
 ## 중요 제한
 텍스트 추출이 가능하다는 것은 PDF에 포함된 텍스트를 읽어들였다는 뜻이지, 원문 내용의 정오나 나무위키 문서의 해석이 공식 설정임을 검증했다는 뜻은 아닙니다. 답변에서는 문서의 서술과 추론을 구분해야 합니다. 데모 모드는 키워드 검색 기반의 제한적 요약이며, 보다 자연스러운 답변은 설정에서 Gemini 개인 API 키를 입력해 AI 모드로 사용할 수 있습니다.

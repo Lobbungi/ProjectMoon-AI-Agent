@@ -4,7 +4,7 @@
   const els = {
     sidebar: $("#sidebar"), mobileDim: $("#mobileDim"), messages: $("#messages"), input: $("#promptInput"),
     send: $("#sendBtn"), welcome: $("#welcome"), retrieved: $("#retrievedSources"),
-    usageCount: $("#usageCount"), usageBar: $("#usageBar"), usageMode: $("#usageMode"),
+    usageCount: $("#usageCount"), usageMode: $("#usageMode"),
     usageNote: $("#usageNote"), sideMode: $("#sideMode"), connection: $("#connectionLabel"),
     apiKey: $("#apiKey"), model: $("#modelSelect"), apiStatus: $("#apiStatus"),
     guideName: $("#guideName"), guideTone: $("#guideTone"), guidePrompt: $("#guidePrompt")
@@ -13,25 +13,23 @@
   let usage = 0;
   let settings = { mode: "demo", key: "", model: "gemini-3.5-flash-lite", guideName: "앤젤라", tone: "calm", extra: "", remember: false };
   let conversation = [];
-  const todayKey = "lore_demo_usage_" + new Date().toISOString().slice(0,10);
 
   function toast(msg) {
     const t = $("#toast"); t.textContent = msg; t.classList.add("show");
     clearTimeout(toast.timer); toast.timer = setTimeout(() => t.classList.remove("show"), 2500);
   }
   function loadUsage() {
-    try { usage = Number(sessionStorage.getItem(todayKey) || 0); } catch { usage = 0; }
+    usage = 0;
     updateUsage();
   }
   function updateUsage() {
-    const max = settings.mode === "demo" ? 20 : 100;
     els.usageCount.textContent = usage;
-    els.usageBar.style.width = Math.min(100, usage / max * 100) + "%";
-    els.usageMode.textContent = settings.mode === "demo" ? "데모" : "개인 키";
-    els.usageNote.textContent = settings.mode === "demo" ? "샘플 답변만 생성합니다. API 비용 없음." : "개인 API 사용량은 제공업체 계정에 청구됩니다.";
+    els.usageMode.textContent = settings.mode === "demo" ? "제한 없음" : "개인 API";
+    els.usageNote.textContent = settings.mode === "demo"
+      ? "사이트 자체 사용 횟수 제한이 없습니다. 데모 답변은 키워드 검색 기반이며 API 비용이 발생하지 않습니다."
+      : "사이트 자체 사용 횟수 제한이 없습니다. Gemini 제공업체의 요청 한도·요금 정책은 별도로 적용됩니다.";
     els.sideMode.textContent = settings.mode === "demo" ? "데모 모드" : "개인 키 모드";
     els.connection.innerHTML = "<i></i> " + (settings.mode === "demo" ? "데모 응답" : "개인 Gemini API");
-    try { sessionStorage.setItem(todayKey, String(usage)); } catch {}
   }
   function safeText(s) {
     return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
@@ -320,10 +318,6 @@ ${docs.slice(0,3).map((d,i)=>`[자료 ${i+1}] ${d.title} (${d.type})\n${String(d
   async function sendMessage(forced) {
     const query = (forced || els.input.value).trim();
     if (!query || els.send.disabled) return;
-    if (settings.mode === "demo" && usage >= 20) {
-      toast("데모 일일 제한에 도달했습니다. 내일 다시 이용해 주세요.");
-      return;
-    }
     els.input.value = ""; els.input.style.height = "auto";
     addMessage("user", query);
     const docs = retrieve(query);
