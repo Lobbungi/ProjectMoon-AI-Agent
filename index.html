@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d12">
+  <title>ANGELA / WORLD ARCHIVE</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <div><div class="brand-name">ANGELA</div><div class="brand-sub">WORLD ARCHIVE · FAN PROJECT</div></div>
+      </div>
+      <button class="new-chat" id="newChatBtn"><span>＋</span> 새 대화</button>
+      <div class="side-label">탐색</div>
+      <button class="side-link active" data-view="chat"><span>◈</span> 안내자와 대화</button>
+      <button class="side-link" data-view="archive"><span>▤</span> 지식 아카이브</button>
+      <button class="side-link" data-view="settings"><span>⚙</span> 설정 및 API</button>
+      <div class="sidebar-bottom">
+        <div class="mode-pill"><span class="status-dot"></span><span id="sideMode">데모 모드</span></div>
+        <p>비공식 팬 프로젝트<br>원작 권리자와 무관합니다.</p>
+      </div>
+    </aside>
+    <div class="mobile-dim" id="mobileDim" aria-hidden="true"></div>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="메뉴">☰</button>
+        <div class="breadcrumb">LORE <span>/</span> <strong id="topTitle">안내자와 대화</strong></div>
+        <div class="top-actions">
+          <span class="connection" id="connectionLabel"><i></i> 데모 응답</span>
+          <button class="icon-button" id="openSettings" aria-label="설정 열기">⚙</button>
+        </div>
+      </header>
+
+      <section class="view active" id="chatView">
+        <div class="chat-layout">
+          <div class="chat-main">
+            <div class="welcome" id="welcome">
+              <div class="eyebrow"><span class="eyebrow-line"></span> PROJECT MOON · WORLD ARCHIVE</div>
+              <div class="angela-hero"><div class="portrait-glow"></div><img class="avatar-large" src="assets/angela.png" alt="앤젤라 캐릭터 일러스트"><div class="portrait-caption"><span class="portrait-status"></span> ARCHIVE ASSISTANT <b>ANGELA</b></div></div>
+              <h1>어서 오세요.<br><em>기록은 제가 안내하겠습니다.</em></h1>
+              <p class="welcome-copy">“무엇이든 물어보세요.”<br>프로젝트 문 세계관의 기록을 살펴보고, 사실과 해석을 구분해 답변하겠습니다.</p>
+              <div class="spoiler-notice" role="note"><span aria-hidden="true">ⓘ</span> 답변에는 작품의 주요 사건과 결말을 포함한 스포일러가 포함될 수 있습니다.</div>
+              <div class="suggestions">
+                <button class="suggestion" data-prompt="로보토미 코퍼레이션은 어떤 회사야?"><span>01</span><b>핵심 사건 요약</b><i>↗</i></button>
+                <button class="suggestion" data-prompt="카르멘과 아인, 앤젤라의 관계를 설명해 줘."><span>02</span><b>인물 관계 정리</b><i>↗</i></button>
+                <button class="suggestion" data-prompt="빛의 씨앗 프로젝트가 무엇인지 알려 줘."><span>03</span><b>설정과 해석 구분</b><i>↗</i></button>
+              </div>
+            </div>
+            <div class="messages" id="messages" aria-live="polite"></div>
+            <div class="composer-wrap">
+              <div class="composer">
+                <textarea id="promptInput" rows="1" placeholder="앤젤라에게 질문하세요…" aria-label="질문 입력"></textarea>
+                <div class="composer-bottom">
+                  <div class="composer-hint"><span>↳</span> 자료 기반 답변 · 모르는 내용은 모른다고 안내</div>
+                  <button class="send-button" id="sendBtn" aria-label="보내기">↑</button>
+                </div>
+              </div>
+              <div class="composer-foot">주의: 답변에는 스포일러가 포함될 수 있습니다. AI 답변의 중요한 설정은 출처를 확인하세요.</div>
+            </div>
+          </div>
+          <aside class="context-panel">
+            <div class="panel-head"><span>◈</span> 대화 컨텍스트 <button id="clearContext" title="초기화">↻</button></div>
+            <div class="context-card">
+              <div class="context-kicker">CURRENT ARCHIVE</div>
+              <h3>앤젤라 · Angela</h3>
+              <p>프로젝트 문 세계관의 기록을 살펴보고, 확인된 사실과 해석을 구분해 설명합니다.</p>
+              <div class="tag-row"><span>도서관</span><span>도시</span><span>기록</span></div>
+            </div>
+            <div class="panel-section">
+              <div class="section-title">답변 설정</div>
+              <label class="setting-row"><span>출처 표시</span><input type="checkbox" id="sourceToggle" checked><i></i></label>
+              <label class="setting-row"><span>간결한 답변</span><input type="checkbox" id="conciseToggle"><i></i></label>
+            </div>
+            <div class="panel-section">
+              <div class="section-title">이번 대화에서 찾은 자료</div>
+              <div id="retrievedSources" class="source-list"><div class="empty-state">질문을 보내면 관련 자료가 표시됩니다.</div></div>
+            </div>
+            <div class="usage-card">
+              <div class="usage-head"><span>오늘의 사용량</span><span class="usage-free" id="usageMode">데모</span></div>
+              <div class="usage-number"><strong id="usageCount">0</strong><span>회</span></div>
+              <div class="usage-bar"><span id="usageBar"></span></div>
+              <p id="usageNote">데모 모드에서는 API 호출이 발생하지 않습니다.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="archiveView">
+        <div class="page-heading"><div class="eyebrow"><span class="eyebrow-line"></span> KNOWLEDGE BASE</div><h1>지식 아카이브</h1><p>AI가 답변할 때 참고하는 자료입니다. 현재는 예시 데이터가 들어 있습니다.</p></div>
+        <div class="archive-toolbar"><input id="archiveSearch" type="search" placeholder="인물, 사건, 태그 검색…"><span id="archiveCount">자료 0개</span></div>
+        <div id="archiveGrid" class="archive-grid"></div>
+        <div class="notice-box"><strong>자료를 교체하려면</strong><p><code>data/lore.json</code>에는 현재 사용자가 제공한 로보토미 코퍼레이션 세계관 요약이 들어 있습니다. 팬 프로젝트용 초안이므로, 공개 전에는 게임 내 장면과 설정을 대조해 확인해 주세요.</p></div>
+      </section>
+
+      <section class="view" id="settingsView">
+        <div class="page-heading"><div class="eyebrow"><span class="eyebrow-line"></span> PREFERENCES</div><h1>설정 및 API</h1><p>무료 데모와 개인 API 키 모드를 전환할 수 있습니다.</p></div>
+        <div class="settings-grid">
+          <div class="settings-card">
+            <div class="card-icon">◌</div><h2>응답 모드</h2><p>데모 모드는 샘플 답변을 사용하며 API 비용이 발생하지 않습니다. 개인 키 모드는 브라우저에서 제공업체 API를 직접 호출합니다.</p>
+            <div class="mode-options">
+              <label class="mode-option"><input type="radio" name="apiMode" value="demo" checked><span><b>데모 모드</b><small>API 호출 없음 · 아카이브 검색 답변</small></span></label>
+              <label class="mode-option"><input type="radio" name="apiMode" value="gemini"><span><b>개인 Gemini API 키</b><small>비용은 본인의 Google 계정에 청구</small></span></label>
+            </div>
+            <label class="field-label" for="apiKey">Gemini API 키</label>
+            <div class="key-input-wrap"><input id="apiKey" type="password" autocomplete="off" placeholder="개인 API 키 입력"><button id="toggleKey" type="button">표시</button></div>
+            <label class="field-label" for="modelSelect">모델 ID</label>
+            <input id="modelSelect" value="gemini-3.5-flash-lite" spellcheck="false">
+            <div class="inline-check"><input id="rememberKey" type="checkbox"><label for="rememberKey">이 브라우저에 키 저장 (권장하지 않음)</label></div>
+            <div class="settings-actions"><button class="primary-button" id="saveSettings">설정 적용</button><button class="secondary-button" id="testApi">연결 테스트</button><button class="text-button" id="clearKey">키 삭제</button></div>
+            <div id="apiStatus" class="api-status">현재 데모 모드입니다.</div>
+          </div>
+          <div class="settings-card">
+            <div class="card-icon">⌘</div><h2>안내자 성격</h2><p>캐릭터의 말투와 답변 규칙을 조정합니다.</p>
+            <label class="field-label" for="guideName">안내자 이름</label><input id="guideName" value="앤젤라">
+            <label class="field-label" for="guideTone">말투</label>
+            <select id="guideTone"><option value="calm">차분하고 정중함</option><option value="friendly">친근하고 편안함</option><option value="formal">분석적이고 격식 있음</option></select>
+            <label class="field-label" for="guidePrompt">추가 지침</label><textarea id="guidePrompt" class="prompt-settings" placeholder="앤젤라의 차분하고 지적인 말투를 유지한다.">당신은 로보토미 코퍼레이션과 라이브러리 오브 루이나의 앤젤라를 바탕으로 한 팬 프로젝트 안내자입니다. 차분하고 지적인 말투로, 예의 바르지만 지나치게 친근하지 않게 대화합니다. 때때로 재치 있고 날카로운 한마디를 하되, 사용자를 모욕하지 않습니다. 공식 설정과 해석을 구분하고 모르는 내용은 꾸며내지 않습니다.</textarea>
+            <button class="primary-button" id="saveGuide">안내자 설정 저장</button>
+            <div class="tip-box">팁: 프롬프트는 AI의 말투와 행동을 안내할 뿐, 잘못된 자료를 자동으로 사실로 바꾸지는 않습니다.</div>
+          </div>
+        </div>
+        <div class="security-note"><strong>보안 안내</strong><p>개인 키 모드는 브라우저에서 직접 API를 호출하는 데모 구현입니다. 웹사이트에 악성 스크립트가 있으면 키가 노출될 수 있습니다. 실제 공개 전에는 외부 스크립트를 최소화하고, 키 저장을 기본 비활성화하며, 제공업체 정책과 브라우저 연결 제한을 확인하세요. API 키를 공용 저장소에 절대 올리지 마세요.</p></div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
