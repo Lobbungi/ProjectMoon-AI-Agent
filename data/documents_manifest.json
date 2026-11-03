@@ -1,0 +1,311 @@
+[
+  {
+    "file": "라오루.pdf",
+    "pages": 16,
+    "extractable_chars": 9308,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 16
+  },
+  {
+    "file": "로보토미-날개.pdf",
+    "pages": 6,
+    "extractable_chars": 7612,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-대호수.pdf",
+    "pages": 14,
+    "extractable_chars": 10573,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-도시.pdf",
+    "pages": 74,
+    "extractable_chars": 89179,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-두번째 백야.pdf",
+    "pages": 8,
+    "extractable_chars": 6639,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-뒤틀림 현상.pdf",
+    "pages": 11,
+    "extractable_chars": 11299,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-머리.pdf",
+    "pages": 17,
+    "extractable_chars": 24033,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-발현한 뒤틀림 목록.pdf",
+    "pages": 41,
+    "extractable_chars": 29284,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-백야, 흑주.pdf",
+    "pages": 8,
+    "extractable_chars": 6575,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-세계관.pdf",
+    "pages": 29,
+    "extractable_chars": 29493,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 33
+  },
+  {
+    "file": "로보토미-세계의 제일 밑바닥에 존재하는 강.pdf",
+    "pages": 3,
+    "extractable_chars": 2501,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-세피라.pdf",
+    "pages": 49,
+    "extractable_chars": 81128,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 100
+  },
+  {
+    "file": "로보토미-손가락.pdf",
+    "pages": 9,
+    "extractable_chars": 8383,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-스토리.pdf",
+    "pages": 36,
+    "extractable_chars": 54308,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 66
+  },
+  {
+    "file": "로보토미-신(心).pdf",
+    "pages": 5,
+    "extractable_chars": 4413,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-엔케팔린.pdf",
+    "pages": 3,
+    "extractable_chars": 3027,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-연기전쟁.pdf",
+    "pages": 10,
+    "extractable_chars": 9984,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-연표.pdf",
+    "pages": 15,
+    "extractable_chars": 14039,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-유리창.pdf",
+    "pages": 12,
+    "extractable_chars": 10966,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-죄종.pdf",
+    "pages": 13,
+    "extractable_chars": 8940,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-특색.pdf",
+    "pages": 13,
+    "extractable_chars": 15767,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-해결사.pdf",
+    "pages": 38,
+    "extractable_chars": 44644,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-환상체.pdf",
+    "pages": 17,
+    "extractable_chars": 20701,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "로보토미-황금가지.pdf",
+    "pages": 10,
+    "extractable_chars": 11729,
+    "status": "텍스트 추출 완료"
+  },
+  {
+    "file": "림버스.pdf",
+    "pages": 27,
+    "extractable_chars": 27505,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 41
+  },
+  {
+    "file": "라오루-도서관-기술과학의 층.pdf",
+    "pages": 37,
+    "extractable_chars": 28391,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 37
+  },
+  {
+    "file": "라오루-도서관-문학의 층.pdf",
+    "pages": 45,
+    "extractable_chars": 30762,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 45
+  },
+  {
+    "file": "라오루-도서관-사회과학의 층.pdf",
+    "pages": 43,
+    "extractable_chars": 34140,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 43
+  },
+  {
+    "file": "라오루-도서관-언어의 층.pdf",
+    "pages": 42,
+    "extractable_chars": 35276,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 42
+  },
+  {
+    "file": "라오루-도서관-역사의 층.pdf",
+    "pages": 38,
+    "extractable_chars": 26998,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 38
+  },
+  {
+    "file": "라오루-도서관-예술의 층.pdf",
+    "pages": 40,
+    "extractable_chars": 28109,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 40
+  },
+  {
+    "file": "라오루-도서관-자연과학의 층.pdf",
+    "pages": 42,
+    "extractable_chars": 34826,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 42
+  },
+  {
+    "file": "라오루-도서관-종교의 층.pdf",
+    "pages": 32,
+    "extractable_chars": 29087,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 32
+  },
+  {
+    "file": "라오루-도서관-철학의 층.pdf",
+    "pages": 35,
+    "extractable_chars": 26221,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 35
+  },
+  {
+    "file": "라오루-도서관-총류의 층.pdf",
+    "pages": 25,
+    "extractable_chars": 19664,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 25
+  },
+  {
+    "file": "라오루-도서관.pdf",
+    "pages": 19,
+    "extractable_chars": 22260,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 19
+  },
+  {
+    "file": "림버스-지옥편-10장.pdf",
+    "pages": 8,
+    "extractable_chars": 9299,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 8
+  },
+  {
+    "file": "림버스-지옥편-1장.pdf",
+    "pages": 13,
+    "extractable_chars": 6359,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 13
+  },
+  {
+    "file": "림버스-지옥편-2장.pdf",
+    "pages": 15,
+    "extractable_chars": 9929,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 15
+  },
+  {
+    "file": "림버스-지옥편-3장.pdf",
+    "pages": 27,
+    "extractable_chars": 15856,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 26
+  },
+  {
+    "file": "림버스-지옥편-4장.pdf",
+    "pages": 22,
+    "extractable_chars": 16491,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 22
+  },
+  {
+    "file": "림버스-지옥편-5장.pdf",
+    "pages": 20,
+    "extractable_chars": 16651,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 20
+  },
+  {
+    "file": "림버스-지옥편-6장.pdf",
+    "pages": 16,
+    "extractable_chars": 15998,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 16
+  },
+  {
+    "file": "림버스-지옥편-7장.pdf",
+    "pages": 21,
+    "extractable_chars": 25356,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 21
+  },
+  {
+    "file": "림버스-지옥편-8장.pdf",
+    "pages": 33,
+    "extractable_chars": 32370,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 33
+  },
+  {
+    "file": "림버스-지옥편-9장.pdf",
+    "pages": 17,
+    "extractable_chars": 26225,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 17
+  },
+  {
+    "file": "림버스-지옥편.pdf",
+    "pages": 16,
+    "extractable_chars": 6314,
+    "status": "텍스트 추출 완료 — 페이지별 출처 연결",
+    "indexed_records": 16
+  }
+]
