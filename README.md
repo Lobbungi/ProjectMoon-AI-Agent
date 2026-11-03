@@ -1,11 +1,7 @@
 # PROJECT MOON LORE — 세계관 안내자 AI 프로토타입 v16
 
-Lobotomy Corporation / Library of Ruina / Limbus Company 세 작품을 포괄하는 비공식 팬 프로젝트입니다. `로보토미-...`로 시작하는 파일명도 로보토미 코퍼레이션 단독 자료라는 뜻으로 해석하지 않습니다.
+Lobotomy Corporation / Library of Ruina / Limbus Company 세 작품을 포괄하는 비공식 팬 프로젝트입니다.
 
-## 실행
-1. ZIP 압축 해제
-2. 폴더에서 터미널 실행 후 `python -m http.server 8000`
-3. 브라우저에서 `http://localhost:8000` 열기
 
 ## 이번 보강
 - 보충 ZIP에 있던 PDF 5개를 모두 열어 텍스트 추출을 확인했습니다.
